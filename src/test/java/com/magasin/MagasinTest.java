@@ -15,7 +15,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 class MagasinTest {
 
     @Test
-    @DisplayName("Generic function")
+    @DisplayName("Foo")
     void foo() {
         String name = "foo";
         Item[] items = new Item[] { new Item(name, 0 , 0 ) };
@@ -27,7 +27,7 @@ class MagasinTest {
     }
 
     @Test
-    @DisplayName("Quality decreases by 1 & SellIn positive")
+    @DisplayName("Foo")
     void fooQualityDecrease() {
         String name = "foo";
         Item[] items = new Item[] { new Item(name, 10 , 10 ) };
@@ -39,7 +39,7 @@ class MagasinTest {
     }
 
     @Test
-    @DisplayName("Quality decreases by 2 & SellIn negative")
+    @DisplayName("Foo")
     void fooQualityDecreaseTwice() {
         String name = "foo";
         Item[] items = new Item[] { new Item(name, -1 , 10 ) };
@@ -51,7 +51,7 @@ class MagasinTest {
     }
 
     @Test
-    @DisplayName("Quality doesn't decrease below zero")
+    @DisplayName("Foo")
     void fooQualityDoesntDecreaseBelowZero() {
         String name = "foo";
         Item[] items = new Item[] { new Item(name, 2 , 0 ) };
@@ -105,7 +105,7 @@ class MagasinTest {
     }
 
     @Test
-    @DisplayName("Tests de Rémi")
+    @DisplayName("Comté")
     void comteCheese() {
         Item[] items = new Item[] { new Item("Comté", 4, 10) };
         Magasin app = new Magasin(items);
@@ -115,7 +115,7 @@ class MagasinTest {
     }
 
     @Test
-    @DisplayName("n°1")
+    @DisplayName("Comté")
     void comteCheese1() {
         Item[] items = new Item[] { new Item("Comté", 0, 0) };
         Magasin app = new Magasin(items);
@@ -125,12 +125,112 @@ class MagasinTest {
     }
 
     @Test
-    @DisplayName("n°2")
+    @DisplayName("Comté")
     void comteCheese2() {
         Item[] items = new Item[] { new Item("Comté", 7, 50) };
         Magasin app = new Magasin(items);
         app.updateQuality();
         assertEquals(6, app.items[0].sellIn);
         assertEquals(50, app.items[0].quality);
+    }
+    @Test
+    @DisplayName("Kryptonite")
+    void Kryptonite() {
+        String name = "Kryptonite";
+        Item[] items = new Item[] { new Item("Kryptonite", 4, 50) };
+        Magasin app = new Magasin(items);
+        app.updateQuality();
+        assertEquals(name, app.items[0].name);
+        assertEquals(50, app.items[0].quality);
+        assertEquals(4, app.items[0].sellIn);
+    }
+
+    @Test
+    @DisplayName("Kryptonite")
+    void KryptoniteSellInDecrease() {
+        String name = "Kryptonite";
+        Item[] items = new Item[] { new Item("Kryptonite", 3, 50) };
+        Magasin app = new Magasin(items);
+        app.updateQuality();
+        assertEquals(name, app.items[0].name);
+        assertEquals(50, app.items[0].quality);
+        assertEquals(3, app.items[0].sellIn);
+    }
+
+    @Test
+    @DisplayName("Kryptonite")
+    void KryptoniteSellInDecreaseTwice() {
+        String name = "Kryptonite";
+        Item[] items = new Item[] { new Item("Kryptonite", 2, 50) };
+        Magasin app = new Magasin(items);
+        app.updateQuality();
+        assertEquals(name, app.items[0].name);
+        assertEquals(50, app.items[0].quality);
+        assertEquals(2, app.items[0].sellIn);
+    }
+
+    @Test
+    @DisplayName("Kryptonite")
+    void KryptoniteSellInDecreaseBelowZero() {
+        String name = "Kryptonite";
+        Item[] items = new Item[] { new Item("Kryptonite", -3, 50) };
+        Magasin app = new Magasin(items);
+        app.updateQuality();
+        assertEquals(name, app.items[0].name);
+        assertEquals(50, app.items[0].quality);
+        assertEquals(-3, app.items[0].sellIn);
+    }
+
+    @Test
+    @DisplayName("Pass VIP")
+    void SellIn_10_or_less() {
+        // Cas où sellIn est égal à 10
+        Item item = new Item("Pass VIP Concert", 10, 20);
+        Magasin app = new Magasin(new Item[] { item });
+        app.updateQuality();
+        assertEquals(9, item.sellIn);
+        assertEquals(22, item.quality);
+
+        // Cas où sellIn est inférieur à 10
+        item = new Item("Pass VIP Concert", 9, 20);
+        app = new Magasin(new Item[] { item });
+        app.updateQuality();
+        assertEquals(8, item.sellIn);
+        assertEquals(22, item.quality);
+    }
+
+    @Test
+    @DisplayName("Pass VIP")
+    void SellIn_5_or_less() {
+        // Cas où sellIn est égal à 10
+        Item item = new Item("Pass VIP Concert", 5, 20);
+        Magasin app = new Magasin(new Item[] { item });
+        app.updateQuality();
+        assertEquals(4, item.sellIn);
+        assertEquals(23, item.quality);
+
+        // Cas où sellIn est inférieur à 10
+        item = new Item("Pass VIP Concert", 4, 20);
+        app = new Magasin(new Item[] { item });
+        app.updateQuality();
+        assertEquals(3, item.sellIn);
+        assertEquals(23, item.quality);
+    }
+    @Test
+    @DisplayName("Pass VIP")
+    void SellIn_68_or_less() {
+        // Cas où sellIn est égal à 10
+        Item item = new Item("Pass VIP Concert", 68, 20);
+        Magasin app = new Magasin(new Item[] { item });
+        app.updateQuality();
+        assertEquals(67, item.sellIn);
+        assertEquals(21, item.quality);
+
+        // Cas où sellIn est inférieur à 10
+        item = new Item("Pass VIP Concert", 67, 20);
+        app = new Magasin(new Item[] { item });
+        app.updateQuality();
+        assertEquals(66, item.sellIn);
+        assertEquals(21, item.quality);
     }
 }

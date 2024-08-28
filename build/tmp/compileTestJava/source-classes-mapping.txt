@@ -1,0 +1,2 @@
+com/magasin/MagasinTest.java
+ com.magasin.MagasinTest
