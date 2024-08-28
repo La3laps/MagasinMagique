@@ -62,6 +62,48 @@ class MagasinTest {
         assertEquals(0, app.items[0].quality);
     }
 
+    /* ? Pouvoirs magique
+    * quality decreases by two if SellIn is positive,
+    * quality decreases by four if SellIn is negative,
+    * quality doesn't decrease below zero.
+    ? */
+
+    @Test
+    @DisplayName("PM - Quality decreases by two & Sellin>0")
+    void qualityDecreasesByTwo() {
+        String name = "Pouvoirs magiques";
+        Item[] items = new Item[] { new Item(name, 2 , 10 ) };
+        Magasin app = new Magasin(items);
+        app.updateQuality();
+        assertEquals(name, app.items[0].name);
+        assertEquals(1, app.items[0].sellIn);
+        assertEquals(8, app.items[0].quality);
+    }
+
+    @Test
+    @DisplayName("PM - Quality decreases by four & Sellin<=0")
+    void qualityDecreasesByFour() {
+        String name = "Pouvoirs magiques";
+        Item[] items = new Item[] { new Item(name, -1 , 10 ) };
+        Magasin app = new Magasin(items);
+        app.updateQuality();
+        assertEquals(name, app.items[0].name);
+        assertEquals(-2, app.items[0].sellIn);
+        assertEquals(6, app.items[0].quality);
+    }
+
+    @Test
+    @DisplayName("PM - Quality decreases by four & Sellin<=0")
+    void qualityDoesntDecreaseBelowZero() {
+        String name = "Pouvoirs magiques";
+        Item[] items = new Item[] { new Item(name, 5 , 0 ) };
+        Magasin app = new Magasin(items);
+        app.updateQuality();
+        assertEquals(name, app.items[0].name);
+        assertEquals(4, app.items[0].sellIn);
+        assertEquals(0, app.items[0].quality);
+    }
+
     @Test
     @DisplayName("Tests de Rémi")
     void comteCheese() {
