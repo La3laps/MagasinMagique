@@ -91,4 +91,48 @@ class MagasinTest {
         assertEquals(6, app.items[0].sellIn);
         assertEquals(50, app.items[0].quality);
     }
+    @Test
+    void Kryptonite() {
+        String name = "Kryptonite";
+        Item[] items = new Item[] { new Item("Kryptonite", 4, 50) };
+        Magasin app = new Magasin(items);
+        app.updateQuality();
+        assertEquals(name, app.items[0].name);
+        assertEquals(50, app.items[0].quality);
+        assertEquals(4, app.items[0].sellIn);
+    }
+
+    @Test
+    void KryptoniteSellInDecrease() {
+        String name = "Kryptonite";
+        Item[] items = new Item[] { new Item("Kryptonite", 3, 50) };
+        Magasin app = new Magasin(items);
+        app.updateQuality();
+        assertEquals(name, app.items[0].name);
+        assertEquals(50, app.items[0].quality);
+        assertEquals(3, app.items[0].sellIn);
+    }
+
+    @Test
+    void KryptoniteSellInDecreaseTwice() {
+        String name = "Kryptonite";
+        Item[] items = new Item[] { new Item("Kryptonite", 2, 50) };
+        Magasin app = new Magasin(items);
+        app.updateQuality();
+        assertEquals(name, app.items[0].name);
+        assertEquals(50, app.items[0].quality);
+        assertEquals(2, app.items[0].sellIn);
+    }
+
+    @Test
+    void KryptoniteSellInDecreaseBelowZero() {
+        String name = "Kryptonite";
+        Item[] items = new Item[] { new Item("Kryptonite", -3, 50) };
+        Magasin app = new Magasin(items);
+        app.updateQuality();
+        assertEquals(name, app.items[0].name);
+        assertEquals(50, app.items[0].quality);
+        assertEquals(-3, app.items[0].sellIn);
+    }
+
 }
