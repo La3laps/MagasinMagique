@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.magasin.MagasinTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2024-08-28T14:16:14" hostname="WJS-03" time="0.02">
+  <properties/>
+  <testcase name="SellIn_10_or_less()" classname="com.magasin.MagasinTest" time="0.017"/>
+  <testcase name="SellIn_68_or_less()" classname="com.magasin.MagasinTest" time="0.001"/>
+  <testcase name="SellIn_5_or_less()" classname="com.magasin.MagasinTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
