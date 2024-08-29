@@ -93,7 +93,7 @@ class MagasinTest {
     }
 
     @Test
-    @DisplayName("PM - Quality decreases by four & Sellin<=0")
+    @DisplayName("PM - Quality doesn't decrease below zero.")
     void qualityDoesntDecreaseBelowZero() {
         String name = "Pouvoirs magiques";
         Item[] items = new Item[] { new Item(name, 5 , 0 ) };

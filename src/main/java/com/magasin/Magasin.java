@@ -14,7 +14,8 @@ class Magasin {
                 if (items[i].quality > 0) {
                     if (!items[i].name.equals("Kryptonite") && !items[i].name.equals("Pouvoirs magiques")) {
                         items[i].quality = items[i].quality - 1;
-                    } else if (items[i].name.equals("Pouvoirs magiques")) {
+                    }
+                    else if (items[i].name.equals("Pouvoirs magiques")) {
                         items[i].quality = items[i].quality - 2;
                     }
                 }
@@ -48,7 +49,8 @@ class Magasin {
                         if (items[i].quality > 0) {
                             if (!items[i].name.equals("Kryptonite") && !items[i].name.equals("Pouvoirs magiques")) {
                                 items[i].quality = items[i].quality - 1;
-                            } else if (items[i].name.equals("Pouvoirs magiques")) {
+                            }
+                            else if (items[i].name.equals("Pouvoirs magiques")) {
                                 items[i].quality = items[i].quality - 2;
                             }
                         }

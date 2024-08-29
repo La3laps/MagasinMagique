@@ -1,4 +1,4 @@
-com/magasin/Magasin.java
- com.magasin.Magasin
 com/magasin/Item.java
  com.magasin.Item
+com/magasin/Magasin.java
+ com.magasin.Magasin
