@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.magasin.MagasinTest" tests="17" skipped="0" failures="0" errors="0" timestamp="2024-08-29T08:14:50" hostname="WJS-04" time="0.035">
+<testsuite name="com.magasin.MagasinTest" tests="17" skipped="0" failures="0" errors="0" timestamp="2024-08-29T09:01:27" hostname="LJS-01" time="0.044">
   <properties/>
-  <testcase name="Kryptonite" classname="com.magasin.MagasinTest" time="0.017"/>
-  <testcase name="Kryptonite" classname="com.magasin.MagasinTest" time="0.0"/>
-  <testcase name="Pass VIP" classname="com.magasin.MagasinTest" time="0.001"/>
-  <testcase name="Foo" classname="com.magasin.MagasinTest" time="0.0"/>
+  <testcase name="Kryptonite" classname="com.magasin.MagasinTest" time="0.025"/>
+  <testcase name="Kryptonite" classname="com.magasin.MagasinTest" time="0.001"/>
+  <testcase name="Pass VIP" classname="com.magasin.MagasinTest" time="0.0"/>
+  <testcase name="Foo" classname="com.magasin.MagasinTest" time="0.001"/>
   <testcase name="Comté" classname="com.magasin.MagasinTest" time="0.001"/>
   <testcase name="Kryptonite" classname="com.magasin.MagasinTest" time="0.001"/>
   <testcase name="Pass VIP" classname="com.magasin.MagasinTest" time="0.001"/>
-  <testcase name="PM - Quality doesn't decrease below zero." classname="com.magasin.MagasinTest" time="0.0"/>
-  <testcase name="Foo" classname="com.magasin.MagasinTest" time="0.0"/>
-  <testcase name="Kryptonite" classname="com.magasin.MagasinTest" time="0.0"/>
-  <testcase name="PM - Quality decreases by four &amp; Sellin&lt;=0" classname="com.magasin.MagasinTest" time="0.0"/>
-  <testcase name="Comté" classname="com.magasin.MagasinTest" time="0.0"/>
+  <testcase name="PM - Quality doesn't decrease below zero." classname="com.magasin.MagasinTest" time="0.001"/>
+  <testcase name="Foo" classname="com.magasin.MagasinTest" time="0.001"/>
+  <testcase name="Kryptonite" classname="com.magasin.MagasinTest" time="0.001"/>
+  <testcase name="PM - Quality decreases by four &amp; Sellin&lt;=0" classname="com.magasin.MagasinTest" time="0.001"/>
   <testcase name="Comté" classname="com.magasin.MagasinTest" time="0.001"/>
+  <testcase name="Comté" classname="com.magasin.MagasinTest" time="0.0"/>
   <testcase name="Pass VIP" classname="com.magasin.MagasinTest" time="0.001"/>
-  <testcase name="PM - Quality decreases by two &amp; Sellin&gt;0" classname="com.magasin.MagasinTest" time="0.001"/>
-  <testcase name="Foo" classname="com.magasin.MagasinTest" time="0.0"/>
-  <testcase name="Foo" classname="com.magasin.MagasinTest" time="0.0"/>
+  <testcase name="PM - Quality decreases by two &amp; Sellin&gt;0" classname="com.magasin.MagasinTest" time="0.002"/>
+  <testcase name="Foo" classname="com.magasin.MagasinTest" time="0.001"/>
+  <testcase name="Foo" classname="com.magasin.MagasinTest" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
