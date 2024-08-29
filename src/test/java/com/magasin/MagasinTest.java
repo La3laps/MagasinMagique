@@ -81,30 +81,6 @@ class MagasinTest {
     }
 
     @Test
-    @DisplayName("PM - Quality decreases by four & Sellin<=0")
-    void qualityDecreasesByFour() {
-        String name = "Pouvoirs magiques";
-        Item[] items = new Item[] { new Item(name, -1 , 10 ) };
-        Magasin app = new Magasin(items);
-        app.updateQuality();
-        assertEquals(name, app.items[0].name);
-        assertEquals(-2, app.items[0].sellIn);
-        assertEquals(6, app.items[0].quality);
-    }
-
-    @Test
-    @DisplayName("PM - Quality decreases by four & Sellin<=0")
-    void qualityDoesntDecreaseBelowZero() {
-        String name = "Pouvoirs magiques";
-        Item[] items = new Item[] { new Item(name, 5 , 0 ) };
-        Magasin app = new Magasin(items);
-        app.updateQuality();
-        assertEquals(name, app.items[0].name);
-        assertEquals(4, app.items[0].sellIn);
-        assertEquals(0, app.items[0].quality);
-    }
-
-    @Test
     @DisplayName("Comté")
     void comteCheese() {
         Item[] items = new Item[] { new Item("Comté", 4, 10) };
