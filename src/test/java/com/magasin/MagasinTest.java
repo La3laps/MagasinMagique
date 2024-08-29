@@ -18,7 +18,7 @@ class MagasinTest {
     @DisplayName("Foo")
     void foo() {
         String name = "foo";
-        Item[] items = new Item[] { new Item(name, 0 , 50 ) };
+        Item[] items = new Item[] { new Item(name, 0 , 0 ) };
         Magasin app = new Magasin(items);
         app.updateQuality();
         assertEquals(name, app.items[0].name);
